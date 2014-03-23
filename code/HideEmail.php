@@ -131,7 +131,7 @@ class HideEmail_Controller extends ContentController {
 	/**
 	 * This is called by default when this controller is executed.
 	 */
-	function handleAction($request) {
+	function handleAction($request, $action) {
 		// We have two situations to deal with, where urlParams['Action'] is an int (assume Member ID), or a string (assume username)
 		if(is_numeric($this->urlParams['User'])) {
 			// User is numeric, assume it's a member ID and optional parameter is the email subject
